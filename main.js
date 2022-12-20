@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-const play = document.getElementById("play-button")
+const play = document.getElementById("play-button");
 
 play.onclick = () => {
   startGame();
@@ -63,11 +63,7 @@ function drawGame() {
 
   ctx.font = "20px Arial";
   ctx.fillStyle = "#00FF42";
-  ctx.fillText(
-    "Score: " + (snake.tail.length - 1),
-    canvas.width - 120,
-    18
-  );
+  ctx.fillText("Score: " + (snake.tail.length - 1), canvas.width - 120, 18);
   createRect(apple.x, apple.y, apple.size, apple.size, apple.color);
 }
 
@@ -161,5 +157,5 @@ class Apple {
   }
 }
 
-const snake = new Snake(20,20,20)
-let apple = new Apple()
+const snake = new Snake(20, 20, 20);
+let apple = new Apple();
