@@ -3,6 +3,8 @@ const ctx = canvas.getContext("2d");
 
 const play = document.getElementById("play-button");
 
+//FIXME: snake doesnt return when it goes to the rigth side of the canvas
+
 play.onclick = () => {
   startGame();
 };
@@ -80,7 +82,7 @@ window.addEventListener("keydown", (event) => {
     } else if (event.key === "ArrowUp" && snake.rotateY != 1) {
       snake.rotateX = 0;
       snake.rotateY = -1;
-    } else if (event.key === "ArrowRigth" && snake.rotateX != -1) {
+    } else if (event.key === "ArrowRight" && snake.rotateX != -1) {
       snake.rotateX = 1;
       snake.rotateY = 0;
     } else if (event.key === "ArrowDown" && snake.rotateY != -1) {
